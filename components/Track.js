@@ -1,6 +1,6 @@
 // @flow
 
-import { tracks, milestones, categoryColorScale } from '../constants'
+import { tracks, milestones, categories } from '../constants'
 import React from 'react'
 import type { MilestoneMap, TrackId, Milestone } from '../constants'
 
@@ -58,7 +58,7 @@ class Track extends React.Component<Props> {
                 return (
                   <tr key={milestone}>
                     <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categories[track.category].color : '#eee'}`, background: isMet ? categories[track.category].color : undefined}}>
                       {milestone}
                     </td>
                   </tr>

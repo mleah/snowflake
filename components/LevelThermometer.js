@@ -1,7 +1,7 @@
 // @flow
 
 import * as d3 from 'd3'
-import { pointsToLevels, categoryPointsFromMilestoneMap, categoryColorScale, categoryIds } from '../constants'
+import { pointsToLevels, categoryPointsFromMilestoneMap, categories, categoryIds } from '../constants'
 import React from 'react'
 import type { MilestoneMap } from '../constants'
 
@@ -101,12 +101,12 @@ class LevelThermometer extends React.Component<Props> {
                     y={0}
                     width={width}
                     height={height - margins.top - margins.bottom}
-                    style={{fill: categoryColorScale(categoryPoint.categoryId), borderRight: "1px solid #000"}}
+                    style={{fill: categories[categoryPoint.categoryId].color, borderRight: "1px solid #000"}}
                     /> :
                 <path
                     key={categoryPoint.categoryId}
                     d={this.rightRoundedRect(x, 0, width, height - margins.top - margins.bottom, 3)}
-                    style={{fill: categoryColorScale(categoryPoint.categoryId)}}
+                    style={{fill: categories[categoryPoint.categoryId].color}}
                     />
               )
             })}
