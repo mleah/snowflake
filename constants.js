@@ -39,8 +39,6 @@ export const pointsToLevels = {
   '135': '5.3',
 }
 
-export const maxLevel = 135
-
 export type Category = {
   color: string
 }
@@ -309,8 +307,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Grows DL": {
-    "displayName": "Grows DL",
+  "Recruiting": {
+    "displayName": "Recruiting",
     "category": "Growth",
     "description": "Focused on growing DL",
     "milestones": [{
@@ -346,8 +344,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Project Management": {
-    "displayName": "Project Management",
+  "Collobaration": {
+    "displayName": "Collaboration",
     "category": "Team",
     "description": "Focused on the success of the team",
     "milestones": [{
@@ -420,10 +418,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "__________": {
-    "displayName": "_________",
+  "Leadership": {
+    "displayName": "Leadership",
     "category": "Team",
-    "description": "Teamy thing",
+    "description": "Demonstrates Leadership abilities",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -494,10 +492,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Recruiting": {
-    "displayName": "Recruiting",
+  "Sales": {
+    "displayName": "Sales",
     "category": "Opportunity",
-    "description": "Involved in recruitment for Labs",
+    "description": "Participates in finding and vetting new projects",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -701,11 +699,12 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
     .reduce((sum, addend) => (sum + addend), 0)
 
 export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
+  {label: 'Apprentice', minPoints: 0, maxPoints: 5},
+  {label: 'Intern', minPoints: 3, maxPoints: 5},
+  {label: 'Novice', minPoints: 5, maxPoints: 18},
+  {label: 'Developer', minPoints: 18, maxPoints: 36},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 58},
+  {label: 'Senior', minPoints: 36, maxPoints: 58},
   {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
   {label: 'Principal Engineer', minPoints: 90},
   {label: 'Director of Engineering', minPoints: 90}
