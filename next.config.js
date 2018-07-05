@@ -1,5 +1,5 @@
 module.exports = {
-  assetPrefix: '/snowflake',
+  assetPrefix: '',
   exportPathMap: function() {
     return {
       '/': { page: '/' }
