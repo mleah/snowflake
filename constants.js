@@ -39,8 +39,22 @@ export const pointsToLevels = {
   '135': '5.3',
 }
 
+export const titles = [
+  {label: 'Apprentice', minPoints: 0, maxPoints: 5},
+  {label: 'Intern', minPoints: 3, maxPoints: 5},
+  {label: 'Novice', minPoints: 5, maxPoints: 18},
+  {label: 'Developer', minPoints: 18, maxPoints: 36},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 58},
+  {label: 'Senior', minPoints: 36, maxPoints: 58},
+  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
+  {label: 'Principal Engineer', minPoints: 90},
+  {label: 'Director of Engineering', minPoints: 90}
+]
+
 export type Category = {
-  color: string
+  displayName: string,
+  color: string,
+  tracks: Tracks
 }
 
 export type Categories = {
@@ -48,21 +62,38 @@ export type Categories = {
 }
 
 export const categories : Categories = {
-  "Craft": {
-    color: '#DA5526'
-  },
   "Growth": {
+    displayName: 'Growth',
     color: '#F6893D'
   },
   "Team": {
+    displayName: 'Team',
     color: '#FEBC38'
   },
   "Opportunity": {
+    displayName: 'Opportunity',
     color: '#D8C684'
   },
   "Community": {
+    displayName: 'Community',
     color: '#697F9B'
-  } 
+  },
+  "DevCraft": {
+    displayName: 'Developer Craft',
+    color: '#DA5526'
+  },
+  "DLDLCraft": {
+    displayName: 'Delivery Lead Craft',
+    color: '#DA5526'
+  },
+  "DesignerCraft": {
+    displayName: 'Designer Craft',
+    color: '#DA5526'
+  },
+  "QACraft": {
+    displayName: 'Quality Engineering Craft',
+    color: '#DA5526'
+  }
 }
 
 export type CategoryId = $Keys<typeof categories>
@@ -84,156 +115,9 @@ export type Tracks = {
   [key: TrackId]: Track
 }
 
-export const tracks: Tracks = {
-  "iOS": {
-    "displayName": "iOS",
-    "category": "Craft",
-    "description": "Develops expertise in the iOS Platform",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    },{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-
-  "Android": {
-    "displayName": "Android",
-    "category": "Craft",
-    "description": "Develops expertise in the Android Platform",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    },{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-
-  "Javascript": {
-    "displayName": "Javascript",
-    "category": "Craft",
-    "description": "Develops expertise in the Javascript",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-
-  "________": {
-    "displayName": "________",
-    "category": "Craft",
-    "description": "Develops expertise in the ________",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-
-  "Self Growth": {
+export const dlValueTracks: Tracks = {
+  
+  "SelfGrowth": {
     "displayName": "Self Growth",
     "category": "Growth",
     "description": "Grows oneself to better impact DL",
@@ -270,7 +154,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Grows Others": {
+  "GrowsOthers": {
     "displayName": "Grows Others",
     "category": "Growth",
     "description": "Grows others to better impact DL",
@@ -381,10 +265,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Communication": {
-    "displayName": "Communication",
+  "Leadership": {
+    "displayName": "Leadership",
     "category": "Team",
-    "description": "Develops communication skills for better working in a team",
+    "description": "Influences team using Leadership skills",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -418,10 +302,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Leadership": {
-    "displayName": "Leadership",
+  "EI": {
+    "displayName": "Emotional Inteligence",
     "category": "Team",
-    "description": "Demonstrates Leadership abilities",
+    "description": "Demonstrates Emotional Intelligence",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -492,10 +376,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "Sales": {
-    "displayName": "Sales",
+  "Revenue": {
+    "displayName": "Revenue",
     "category": "Opportunity",
-    "description": "Participates in finding and vetting new projects",
+    "description": "Participates in finding new and maintaining current forms of revenue. This can be helping with Sales, maintaining Client Relations ships, or finding new revenue streams",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -678,7 +562,552 @@ export const tracks: Tracks = {
   }
 }
 
+export const devTracks: Tracks = {
+  "iOS": {
+    "displayName": "iOS",
+    "category": "DevCraft",
+    "description": "Develops expertise in the iOS Platform",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+
+  "Android": {
+    "displayName": "Android",
+    "category": "DevCraft",
+    "description": "Develops expertise in the Android Platform",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+
+  "Javascript": {
+    "displayName": "Javascript",
+    "category": "DevCraft",
+    "description": "Develops expertise in the Javascript",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+
+  "DevOps": {
+    "displayName": "DevOps",
+    "category": "DevCraft",
+    "description": "Develops expertise in the DevOps",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  }
+}
+
+export const dldlTracks: Tracks = {
+  "Agile": {
+    "displayName": "Agile Methodology",
+    "category": "DLDLCraft",
+    "description": "something something something Agile",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "ProjectManagement": {
+    "displayName": "Project Management",
+    "category": "DLDLCraft",
+    "description": "something something something Project Management",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "Facilitation": {
+    "displayName": "Facilitation",
+    "category": "DLDLCraft",
+    "description": "something something something Facilitation",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  }
+}
+
+export const designTracks: Tracks = {
+  "UX": {
+    "displayName": "User Experience",
+    "category": "DesignerCraft",
+    "description": "Develops expertise in UX",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "Graphics": {
+    "displayName": "Graphic Design",
+    "category": "DesignerCraft",
+    "description": "Develops expertise in Graphic Design",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "Wireframes": {
+    "displayName": "Wireframes",
+    "category": "DesignerCraft",
+    "description": "Develops expertise in Wireframes",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  }
+}
+
+export const qaTracks: Tracks = {
+  "TestCase": {
+    "displayName": "Test Case",
+    "category": "QACraft",
+    "description": "Develops expertise in writing and executing Test Cases",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "TestCase": {
+    "displayName": "Test Case",
+    "category": "QACraft",
+    "description": "Develops expertise in writing and executing Test Cases",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "AutomatedTesting": {
+    "displayName": "Automated Testing",
+    "category": "QACraft",
+    "description": "Develops expertise in writing and executing Automated Tests",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "BugReporting": {
+    "displayName": "Bug Reporting",
+    "category": "QACraft",
+    "description": "Develops expertise in finding and explaining Defects",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  }
+}
+
+export const allTracks: Tracks[] = [dlValueTracks, devTracks, dldlTracks, designTracks, qaTracks]
+
+const combineAllTracks = (tracksToCombine: Tracks[]) => {
+  let combinedTracks: Tracks = {}
+  tracksToCombine.forEach((tracks) => {
+    let trackIds = Object.keys(tracks)
+    trackIds.forEach((trackId) => {
+      combinedTracks[trackId] = tracks[trackId]
+    })
+  })
+  return combinedTracks
+}
+
+export const tracks: Tracks = combineAllTracks(allTracks)
+
 export const trackIds: TrackId[] = Object.keys(tracks)
+
+const setCategoryTracks = () => {
+  categoryIds.forEach((categoryId) => {
+    categories[categoryId].tracks = {}
+  })
+  trackIds.forEach((trackId) => {
+    const categoryId = tracks[trackId].category
+    categories[categoryId].tracks[trackId] = tracks[trackId]
+  })
+}
+setCategoryTracks()
 
 export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   let pointsByCategory = new Map()
@@ -697,18 +1126,6 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
   trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
     .reduce((sum, addend) => (sum + addend), 0)
-
-export const titles = [
-  {label: 'Apprentice', minPoints: 0, maxPoints: 5},
-  {label: 'Intern', minPoints: 3, maxPoints: 5},
-  {label: 'Novice', minPoints: 5, maxPoints: 18},
-  {label: 'Developer', minPoints: 18, maxPoints: 36},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 58},
-  {label: 'Senior', minPoints: 36, maxPoints: 58},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
-]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
