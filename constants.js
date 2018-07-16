@@ -302,10 +302,10 @@ export const dlValueTracks: Tracks = {
     }],
   },
 
-  "EI": {
-    "displayName": "Emotional Inteligence",
+  "DLProcess": {
+    "displayName": "DL Process",
     "category": "Team",
-    "description": "Demonstrates Emotional Intelligence",
+    "description": "Adopts our project process, which includes understanding project definition, scope, budget, timing, communication, iteration, and shipping.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -713,10 +713,10 @@ export const devTracks: Tracks = {
 }
 
 export const dldlTracks: Tracks = {
-  "Agile": {
-    "displayName": "Agile Methodology",
+  "DLDLToolkit": {
+    "displayName": "DLDL Toolkit",
     "category": "DLDLCraft",
-    "description": "something something something Agile",
+    "description": "Knows which tool to use depending on the scope and phase of the project. These include tools like project management tools (Trello, JIRA), team performance metrics, Google Docs, story mapping, story cards, burn down, Basecamp, distribution tools, crash analysis tools, and analytics tools.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -752,43 +752,7 @@ export const dldlTracks: Tracks = {
   "ProjectManagement": {
     "displayName": "Project Management",
     "category": "DLDLCraft",
-    "description": "something something something Project Management",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    },{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-  "Facilitation": {
-    "displayName": "Facilitation",
-    "category": "DLDLCraft",
-    "description": "something something something Facilitation",
+    "description": "Demonstrates fluency in the common languages of project management and Agile methodologies.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -825,7 +789,7 @@ export const dldlTracks: Tracks = {
 
 export const designTracks: Tracks = {
   "UX": {
-    "displayName": "User Experience",
+    "displayName": "UX Design",
     "category": "DesignerCraft",
     "description": "Develops expertise in UX",
     "milestones": [{
@@ -860,10 +824,10 @@ export const designTracks: Tracks = {
       ],
     }],
   },
-  "Graphics": {
-    "displayName": "Graphic Design",
+  "VisualDesign": {
+    "displayName": "Visual Design",
     "category": "DesignerCraft",
-    "description": "Develops expertise in Graphic Design",
+    "description": "Demonstrates taste of layout, typography and visual hierarchy.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -896,10 +860,10 @@ export const designTracks: Tracks = {
       ],
     }],
   },
-  "Wireframes": {
-    "displayName": "Wireframes",
+  "DesignToolkit": {
+    "displayName": "Design Toolkit",
     "category": "DesignerCraft",
-    "description": "Develops expertise in Wireframes",
+    "description": "Employs design tools to solve and communicate user flows, interaction and motion.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -935,46 +899,10 @@ export const designTracks: Tracks = {
 }
 
 export const qaTracks: Tracks = {
-  "TestCase": {
-    "displayName": "Test Case",
+  "TestStrategy": {
+    "displayName": "Test Strategy",
     "category": "QACraft",
-    "description": "Develops expertise in writing and executing Test Cases",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    },{
-      "summary": "",
-      "signals": [
-      ],
-      "examples": [
-      ],
-    }],
-  },
-  "TestCase": {
-    "displayName": "Test Case",
-    "category": "QACraft",
-    "description": "Develops expertise in writing and executing Test Cases",
+    "description": "Experience with using project definition, scope, and business requirements, to create test cases, bug reports, and regression testing.",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -1043,10 +971,46 @@ export const qaTracks: Tracks = {
       ],
     }],
   },
-  "BugReporting": {
-    "displayName": "Bug Reporting",
+  "QATools": {
+    "displayName": "QA Tools",
     "category": "QACraft",
-    "description": "Develops expertise in finding and explaining Defects",
+    "description": "Expierence with Agile tools such as Jira and Trello and API Testing tools such as Postman and Charles Proxy,",
+    "milestones": [{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }, {
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    },{
+      "summary": "",
+      "signals": [
+      ],
+      "examples": [
+      ],
+    }],
+  },
+  "Accessibility": {
+    "displayName": "Accessibility",
+    "category": "QACraft",
+    "description": "Experience with accessibility standards and promotion",
     "milestones": [{
       "summary": "",
       "signals": [
