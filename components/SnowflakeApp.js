@@ -24,11 +24,11 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   const result = defaultState()
   const hashValues = hash.split('#')[1].split(',')
   if (!hashValues) return null
+  if (hashValues[0]) result.name = decodeURI(hashValues[0])
+  if (hashValues[1]) result.title = decodeURI(hashValues[1])
   trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
+    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i+2]))
   })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
   return result
 }
 
@@ -65,7 +65,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = [encodeURI(state.name), encodeURI(state.title)].concat(trackIds.map(trackId => state.milestoneByTrack[trackId]))
   return values.join(',')
 }
 

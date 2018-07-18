@@ -312,7 +312,7 @@ export const dlValueTracks: Tracks = {
 
   "DLProcess": {
     "displayName": "DL Process",
-    "categories": ["Team","ExpertDoer"],
+    "categories": ["Team","DLDLCraft","ExpertDoer"],
     "description": "Adopts our project process, which includes understanding project definition, scope, budget, timing, communication, iteration, and shipping.",
     "milestones": [{
       "summary": "",
