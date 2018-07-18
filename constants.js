@@ -40,15 +40,24 @@ export const pointsToLevels = {
 }
 
 export const titles = [
-  {label: 'Apprentice', minPoints: 0, maxPoints: 5},
-  {label: 'Intern', minPoints: 3, maxPoints: 5},
-  {label: 'Novice', minPoints: 5, maxPoints: 18},
-  {label: 'Developer', minPoints: 18, maxPoints: 36},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 58},
-  {label: 'Senior', minPoints: 36, maxPoints: 58},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
+  {label: 'Novice Developer', minPoints: 0, tier: 2, requiredCategories: [{categoryId: "DevCraft", points: 3}]},
+  {label: 'Developer', minPoints: 20, tier: 3, requiredCategories: [{categoryId: "DevCraft", points: 6}]},
+  {label: 'Experienced Developer', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "DevCraft", points: 12}]},
+  {label: 'Architect', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "DevCraft", points: 12}, {categoryId: "ExpertDoer", points: 12}]},
+  {label: 'Lead Developer', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "DevCraft", points: 12}, {categoryId: "PeopleOps", points: 12}]},
+  {label: 'Principle Developer', minPoints: 70, tier: 5, requiredCategories: [{categoryId: "DevCraft", points: 20}]},
+  
+  {label: 'Junior Designer', minPoints: 0, tier: 2, requiredCategories: [{categoryId: "DesignerCraft", points: 3}]},
+  {label: 'Designer', minPoints: 20, tier: 3, requiredCategories: [{categoryId: "DesignerCraft", points: 6}]},
+  {label: 'Senior Designer', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "DesignerCraft", points: 12}]},
+  
+  {label: 'Junior Delivery Lead', minPoints: 0, tier: 2, requiredCategories: [{categoryId: "DLDLCraft", points: 3}]},
+  {label: 'Delivery Lead', minPoints: 20, tier: 3, requiredCategories: [{categoryId: "DLDLCraft", points: 6}]},
+  {label: 'Experienced Delivery Lead', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "DLDLCraft", points: 12}]},
+  
+  {label: 'Tier 2 Quality Engineer', minPoints: 0, tier: 2, requiredCategories: [{categoryId: "QACraft", points: 3}]},
+  {label: 'Tier 3 Quality Engineer', minPoints: 20, tier: 3, requiredCategories: [{categoryId: "QACraft", points: 6}]},
+  {label: 'Tier 4 Quality Engineer', minPoints: 40, tier: 4, requiredCategories: [{categoryId: "QACraft", points: 12}]},
 ]
 
 export type Category = {
@@ -1083,14 +1092,24 @@ const setCategoryTracks = () => {
 }
 setCategoryTracks()
 
-export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
+export const pointsByCategoryFromMilestoneMap = (milestoneMap: MilestoneMap, ignoreAdditionalCategories: Boolean = true) => {
   let pointsByCategory = new Map()
   trackIds.forEach((trackId) => {
     const milestone = milestoneMap[trackId]
-    const categoryId = tracks[trackId].categories[0]
-    let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+    let firstCategoryFound = false
+    tracks[trackId].categories.forEach(categoryId => {
+      if (!ignoreAdditionalCategories || !firstCategoryFound) {
+        let currentPoints = pointsByCategory.get(categoryId) || 0
+        pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+      }  
+      firstCategoryFound = true
+    })
   })
+  return pointsByCategory
+}
+
+export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
+  const pointsByCategory = pointsByCategoryFromMilestoneMap(milestoneMap)
   return categoryIds.map(categoryId => {
     const points = pointsByCategory.get(categoryId)
     return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
@@ -1102,10 +1121,17 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
     .reduce((sum, addend) => (sum + addend), 0)
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
+  const pointsByCategory = pointsByCategoryFromMilestoneMap(milestoneMap, false)
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
 
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
+  return titles.filter(title => {
+    let eligible = true
+    title.requiredCategories.forEach(requiredCategory => {
+      let categoryPoints = pointsByCategory.get(requiredCategory.categoryId)
+      eligible = eligible && (categoryPoints >= requiredCategory.points)
+    })
+    return eligible
+  }).filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints))
     .map(title => title.label)
 }
 
