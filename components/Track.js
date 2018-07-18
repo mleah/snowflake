@@ -58,7 +58,7 @@ class Track extends React.Component<Props> {
                 return (
                   <tr key={milestone}>
                     <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categories[track.category].color : '#eee'}`, background: isMet ? categories[track.category].color : undefined}}>
+                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categories[track.categories[0]].color : '#eee'}`, background: isMet ? categories[track.categories[0]].color : undefined}}>
                       {milestone}
                     </td>
                   </tr>

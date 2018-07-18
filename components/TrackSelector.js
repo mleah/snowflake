@@ -62,7 +62,7 @@ class TrackSelector extends React.Component<Props> {
                 <tr>
                                     {Object.keys(categories[categoryId].tracks).map(trackId => (
                   <td key={trackId} className="track-selector-value"
-                      style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categories[tracks[trackId].category].color), background: categories[tracks[trackId].category].color}}
+                      style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categories[tracks[trackId].categories[0]].color), background: categories[tracks[trackId].categories[0]].color}}
                       onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
                     {this.props.milestoneByTrack[trackId]}
                   </td>

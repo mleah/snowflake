@@ -78,21 +78,29 @@ export const categories : Categories = {
     displayName: 'Community',
     color: '#697F9B'
   },
-  "DevCraft": {
-    displayName: 'Developer Craft',
-    color: '#DA5526'
-  },
   "DLDLCraft": {
-    displayName: 'Delivery Lead Craft',
+    displayName: 'Delivery Lead',
     color: '#DA5526'
   },
   "DesignerCraft": {
-    displayName: 'Designer Craft',
+    displayName: 'Designer',
+    color: '#DA5526'
+  },
+  "DevCraft": {
+    displayName: 'Developer',
     color: '#DA5526'
   },
   "QACraft": {
-    displayName: 'Quality Engineering Craft',
+    displayName: 'Quality Engineering',
     color: '#DA5526'
+  },
+  "PeopleOps": {
+    displayName: 'People Ops',
+    color: '#FFFFFF'
+  },
+  "ExpertDoer": {
+    displayName: 'Expert Doer',
+    color: '#FFFFFF'
   }
 }
 
@@ -102,7 +110,7 @@ export const categoryIds: CategoryId[] = Object.keys(categories)
 
 export type Track = {
   displayName: string,
-  category: CategoryId,
+  categories: CategoryId[],
   description: string,
   milestones: {
     summary: string,
@@ -119,7 +127,7 @@ export const dlValueTracks: Tracks = {
   
   "SelfGrowth": {
     "displayName": "Self Growth",
-    "category": "Growth",
+    "categories": ["Growth"],
     "description": "Grows oneself to better impact DL",
     "milestones": [{
       "summary": "",
@@ -156,7 +164,7 @@ export const dlValueTracks: Tracks = {
 
   "GrowsOthers": {
     "displayName": "Grows Others",
-    "category": "Growth",
+    "categories": ["Growth","PeopleOps"],
     "description": "Grows others to better impact DL",
     "milestones": [{
       "summary": "",
@@ -193,7 +201,7 @@ export const dlValueTracks: Tracks = {
 
   "Recruiting": {
     "displayName": "Recruiting",
-    "category": "Growth",
+    "categories": ["Growth"],
     "description": "Focused on growing DL",
     "milestones": [{
       "summary": "",
@@ -230,7 +238,7 @@ export const dlValueTracks: Tracks = {
 
   "Collobaration": {
     "displayName": "Collaboration",
-    "category": "Team",
+    "categories": ["Team"],
     "description": "Focused on the success of the team",
     "milestones": [{
       "summary": "",
@@ -267,7 +275,7 @@ export const dlValueTracks: Tracks = {
 
   "Leadership": {
     "displayName": "Leadership",
-    "category": "Team",
+    "categories": ["Team","PeopleOps","ExpertDoer"],
     "description": "Influences team using Leadership skills",
     "milestones": [{
       "summary": "",
@@ -304,7 +312,7 @@ export const dlValueTracks: Tracks = {
 
   "DLProcess": {
     "displayName": "DL Process",
-    "category": "Team",
+    "categories": ["Team","ExpertDoer"],
     "description": "Adopts our project process, which includes understanding project definition, scope, budget, timing, communication, iteration, and shipping.",
     "milestones": [{
       "summary": "",
@@ -341,7 +349,7 @@ export const dlValueTracks: Tracks = {
 
   "Innovation": {
     "displayName": "Innovation",
-    "category": "Opportunity",
+    "categories": ["Opportunity"],
     "description": "Seeks out and builds innovation",
     "milestones": [{
       "summary": "",
@@ -378,7 +386,7 @@ export const dlValueTracks: Tracks = {
 
   "Revenue": {
     "displayName": "Revenue",
-    "category": "Opportunity",
+    "categories": ["Opportunity","ExpertDoer"],
     "description": "Participates in finding new and maintaining current forms of revenue. This can be helping with Sales, maintaining Client Relations ships, or finding new revenue streams",
     "milestones": [{
       "summary": "",
@@ -415,7 +423,7 @@ export const dlValueTracks: Tracks = {
         
   "Flexibility": {
     "displayName": "Flexibility",
-    "category": "Opportunity",
+    "categories": ["Opportunity"],
     "description": "Demonstrates willingness and ability to go beyond their traditional role",
     "milestones": [{
       "summary": "",
@@ -452,7 +460,7 @@ export const dlValueTracks: Tracks = {
 
   "Internal": {
     "displayName": "Internal Community",
-    "category": "Community",
+    "categories": ["Community","PeopleOps"],
     "description": "Involved in building and growing the culture of Labs",
     "milestones": [{
       "summary": "",
@@ -489,7 +497,7 @@ export const dlValueTracks: Tracks = {
 
   "Outreach": {
     "displayName": "Community Outreach",
-    "category": "Community",
+    "categories": ["Community"],
     "description": "Involved in participating and increasing the outreach of Labs in the community",
     "milestones": [{
       "summary": "",
@@ -526,7 +534,7 @@ export const dlValueTracks: Tracks = {
 
   "Technical": {
     "displayName": "Technical Community",
-    "category": "Community",
+    "categories": ["Community"],
     "description": "Involved in building and growing the prescence of Labs in our respective Technical Communinty",
     "milestones": [{
       "summary": "",
@@ -565,7 +573,7 @@ export const dlValueTracks: Tracks = {
 export const devTracks: Tracks = {
   "iOS": {
     "displayName": "iOS",
-    "category": "DevCraft",
+    "categories": ["DevCraft"],
     "description": "Develops expertise in the iOS Platform",
     "milestones": [{
       "summary": "",
@@ -602,7 +610,7 @@ export const devTracks: Tracks = {
 
   "Android": {
     "displayName": "Android",
-    "category": "DevCraft",
+    "categories": ["DevCraft"],
     "description": "Develops expertise in the Android Platform",
     "milestones": [{
       "summary": "",
@@ -639,7 +647,7 @@ export const devTracks: Tracks = {
 
   "Javascript": {
     "displayName": "Javascript",
-    "category": "DevCraft",
+    "categories": ["DevCraft"],
     "description": "Develops expertise in the Javascript",
     "milestones": [{
       "summary": "",
@@ -676,7 +684,7 @@ export const devTracks: Tracks = {
 
   "DevOps": {
     "displayName": "DevOps",
-    "category": "DevCraft",
+    "categories": ["DevCraft"],
     "description": "Develops expertise in the DevOps",
     "milestones": [{
       "summary": "",
@@ -715,7 +723,7 @@ export const devTracks: Tracks = {
 export const dldlTracks: Tracks = {
   "DLDLToolkit": {
     "displayName": "DLDL Toolkit",
-    "category": "DLDLCraft",
+    "categories": ["DLDLCraft"],
     "description": "Knows which tool to use depending on the scope and phase of the project. These include tools like project management tools (Trello, JIRA), team performance metrics, Google Docs, story mapping, story cards, burn down, Basecamp, distribution tools, crash analysis tools, and analytics tools.",
     "milestones": [{
       "summary": "",
@@ -751,7 +759,7 @@ export const dldlTracks: Tracks = {
   },
   "ProjectManagement": {
     "displayName": "Project Management",
-    "category": "DLDLCraft",
+    "categories": ["DLDLCraft"],
     "description": "Demonstrates fluency in the common languages of project management and Agile methodologies.",
     "milestones": [{
       "summary": "",
@@ -790,7 +798,7 @@ export const dldlTracks: Tracks = {
 export const designTracks: Tracks = {
   "UX": {
     "displayName": "UX Design",
-    "category": "DesignerCraft",
+    "categories": ["DesignerCraft"],
     "description": "Develops expertise in UX",
     "milestones": [{
       "summary": "",
@@ -826,7 +834,7 @@ export const designTracks: Tracks = {
   },
   "VisualDesign": {
     "displayName": "Visual Design",
-    "category": "DesignerCraft",
+    "categories": ["DesignerCraft"],
     "description": "Demonstrates taste of layout, typography and visual hierarchy.",
     "milestones": [{
       "summary": "",
@@ -862,7 +870,7 @@ export const designTracks: Tracks = {
   },
   "DesignToolkit": {
     "displayName": "Design Toolkit",
-    "category": "DesignerCraft",
+    "categories": ["DesignerCraft"],
     "description": "Employs design tools to solve and communicate user flows, interaction and motion.",
     "milestones": [{
       "summary": "",
@@ -901,7 +909,7 @@ export const designTracks: Tracks = {
 export const qaTracks: Tracks = {
   "TestStrategy": {
     "displayName": "Test Strategy",
-    "category": "QACraft",
+    "categories": ["QACraft"],
     "description": "Experience with using project definition, scope, and business requirements, to create test cases, bug reports, and regression testing.",
     "milestones": [{
       "summary": "",
@@ -937,7 +945,7 @@ export const qaTracks: Tracks = {
   },
   "AutomatedTesting": {
     "displayName": "Automated Testing",
-    "category": "QACraft",
+    "categories": ["QACraft"],
     "description": "Develops expertise in writing and executing Automated Tests",
     "milestones": [{
       "summary": "",
@@ -973,7 +981,7 @@ export const qaTracks: Tracks = {
   },
   "QATools": {
     "displayName": "QA Tools",
-    "category": "QACraft",
+    "categories": ["QACraft"],
     "description": "Expierence with Agile tools such as Jira and Trello and API Testing tools such as Postman and Charles Proxy,",
     "milestones": [{
       "summary": "",
@@ -1009,7 +1017,7 @@ export const qaTracks: Tracks = {
   },
   "Accessibility": {
     "displayName": "Accessibility",
-    "category": "QACraft",
+    "categories": ["QACraft"],
     "description": "Experience with accessibility standards and promotion",
     "milestones": [{
       "summary": "",
@@ -1067,8 +1075,10 @@ const setCategoryTracks = () => {
     categories[categoryId].tracks = {}
   })
   trackIds.forEach((trackId) => {
-    const categoryId = tracks[trackId].category
-    categories[categoryId].tracks[trackId] = tracks[trackId]
+    const track = tracks[trackId]
+    track.categories.forEach((categoryId) => {
+        categories[categoryId].tracks[trackId] = track
+    })
   })
 }
 setCategoryTracks()
@@ -1077,7 +1087,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   let pointsByCategory = new Map()
   trackIds.forEach((trackId) => {
     const milestone = milestoneMap[trackId]
-    const categoryId = tracks[trackId].category
+    const categoryId = tracks[trackId].categories[0]
     let currentPoints = pointsByCategory.get(categoryId) || 0
     pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
   })
