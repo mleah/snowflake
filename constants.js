@@ -139,31 +139,31 @@ export const dlValueTracks: Tracks = {
     "categories": ["Growth"],
     "description": "Grows oneself to better impact DL",
     "milestones": [{
-      "summary": "",
+      "summary": "Was a mentee or learned from a coach",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Better undestands how to direct learning with the help of a coach",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Can self-learn effectively without much interaction of a coach",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "[THIS IS NOT A MILESTONE]",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "[THIS IS NOT A MILESTONE]",
       "signals": [
       ],
       "examples": [
@@ -171,30 +171,30 @@ export const dlValueTracks: Tracks = {
     }],
   },
 
-  "GrowsOthers": {
-    "displayName": "Grows Others",
+  "Coaching": {
+    "displayName": "Coaching",
     "categories": ["Growth","PeopleOps"],
-    "description": "Grows others to better impact DL",
+    "description": "Coaches others to better impact DL",
     "milestones": [{
-      "summary": "",
+      "summary": "Mentored a person on a topic",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Has been mentoring others and understands how to focus new mentees on a topic",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Able to coach multiple topics at the same time. Has more advanced coaching techniques.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Coaches coaches for coaching others",
       "signals": [
       ],
       "examples": [
@@ -213,19 +213,19 @@ export const dlValueTracks: Tracks = {
     "categories": ["Growth"],
     "description": "Focused on growing DL",
     "milestones": [{
-      "summary": "",
+      "summary": "Has reviewed a GTKY, interviewed a candidate, or referred a canidate.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Reviews GTKY and interviews canidates multiple times with high level of consistency. Referrs multiple canidates.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Reviews and actively encourages others to review GTKYs. Actively involved in improving the interview process. Referrs multiple senior level canidates.",
       "signals": [
       ],
       "examples": [
@@ -245,10 +245,10 @@ export const dlValueTracks: Tracks = {
     }],
   },
 
-  "Collobaration": {
-    "displayName": "Collaboration",
+  "Transparency": {
+    "displayName": "Transparency",
     "categories": ["Team"],
-    "description": "Focused on the success of the team",
+    "description": "Provides clients and project team members with relevant status and other information needed to make decisions",
     "milestones": [{
       "summary": "",
       "signals": [
@@ -256,19 +256,19 @@ export const dlValueTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Provides clients and project team members with relevant status and other information needed to make decisions. Asks for help, when needed.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Provides clients and project team members with relevant status and other information needed to make decisions. Understands when to escalate issues to clients and founders. Asks for specific help when needed, in a way that makes it easy for the helper to understand and act on the request.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Provides clients with relevant status and other information needed to make decisions. Understands when to escalate issues to clients and founders. Asks for specific help when needed, in a way that makes it easy for the helper to understand and act on the request.",
       "signals": [
       ],
       "examples": [
@@ -330,19 +330,19 @@ export const dlValueTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Adopts our project process, which includes understanding project definition, scope, budget, timing, communication, iteration, and shipping. Holds an understanding of common agile practices and how to apply them to a project.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates our project process, which includes understanding project definition, scope, budget, timing, communication, iteration, and shipping. Begins to understand how to adapt a client’s process into our own. Holds an understanding of common agile practices and how, when, and why one would apply them to a project. Contributes to every part of the project process from estimation and SOW creation through development, and all the way to handoff to client, in order to influence project success. Identifies and manages risk. Proactively plans, and guides an internal and external team to execute against a plan.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates a deep understanding of our project process. Adaptable and open to trying and testing other processes in order to get a team to their most effective point, including integrating client processes into ours. Holds an understanding of common agile practices and how, when, and why one would apply them to a project. Able to teach clients, team members, and other Detroit Labs co-workers about process and best practices in order to influence outcomes. Contributes to every part of the project process from estimation and SOW creation through development, and all the way to handoff to client, in order to ensure project success. Identifies and manages risk, and, where in our control, works to implement new policies that make sure those risks do not reappear in future projects. Proactively plans, and guides an internal and external team to execute against a plan. Delegates effectively - understands when and what to delegate, and clearly communicates what success looks like when the delegate takes responsibility of the task.",
       "signals": [
       ],
       "examples": [
@@ -595,18 +595,45 @@ export const devTracks: Tracks = {
       "signals": [
       ],
       "examples": [
+        "Able to understand and employ fundamental object-oriented principles, appropriately.",
+        "Able to create basic user interfaces & interaction from a reference design.",
+        "Demonstrates understanding of basic networking; able to use simple, RESTful web APIs to create dynamic applications.",
+        "Demonstrates competency using a simple git workflow to collaborate on a project; including GitHub pull requests, code reviews, & resolving simple merge conflicts.",
+        "Demonstrates basic understanding of Unix command line and simple shell commands & operations.",
+        "Seeks out solutions to problems appropriately; understands when and how to use online resources, troubleshooting, and co-workers.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates a firm grasp of all object-oriented concepts & SOLID design principles.",
+        "Writes clean, maintainable code that is easy for other developers to understand. Values readable code over clever code. Understands how and when to refactor code. Documents code effectively, as needed.",
+        "Capable of writing simple tests; unit or BDD.",
+        "Capable of building custom, non-native user interfaces, layouts & interactions; including basic animations.",
+        "Demonstrates proficiency with networking concepts, including authentication (i.e. auth headers or OAuth); able to consume web services while being mindful of security concerns & device resource constraints. Able to design appropriate data models based on API resources.",
+        "Confident performing more advanced git operations (i.e. revert, rebase/squash) branching strategies, and resolving more complex merge conflicts.",
+        "Demonstrates competency with Unix command line and advanced shell commands & operations.",
+        "Demonstrates understanding of build & release process, including; building for release, continuous integration, app signing, test build distribution, & app store submission.",
+        "Capable of performing a thorough code review.",
+        "Demonstrates knowledge of when to seek assistance.",
+        "Capable of maintaining a legacy codebase.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates fluency in object-oriented concepts & able to leverage OOP design patterns, when appropriate.",
+        "Creates tools (i.e. scripts, helper libraries) that help speed up & simplify development for their team, and documents their usage.",
+        "Demonstrates proficiency in test writing and in writing testable code. Comfortable with concepts such as test doubles, fixtures, & mock APIs.",
+        "Capable of creating complex, novel UI and animations from scratch. Demonstrates understanding of UI performance considerations and applies that knowledge to create responsive, dynamic user interfaces.",
+        "Capable of creating apps that can consume any web service provided. Demonstrates fluency in RESTful API concepts and design, including authentication. Capable of designing a REST/JSON API to suit the needs of a project, be it mobile or web.",
+        "Demonstrates fluency in git. Able to admin a GitHub repo, managing features such as protected branches & web hook integrations. Capable of designing or selecting a branching strategy for various types of projects with multiple release pipelines.",
+        "Possesses breadth of knowledge of their primary platform (i.e. Android, iOS, web) and can answer technical questions about the platform’s capabilities and constraints.",
+        "Capable of designing & creating a complete build-to-release process, including; writing any custom scripts that may be needed, handling complex signing and release scenarios, administration of CI servers, and management of either app store accounts & submission configuration (i.e. metadata) or server hosting of the web application.",
+        "Able to contribute to any project when needed, regardless of technology stack.",
+        "On a legacy codebase, having the wisdom to tell when simple bug fixing is enough or larger scale refactoring and rewrites are necessary, not just desirable.",
       ],
     },{
       "summary": "",
@@ -632,18 +659,45 @@ export const devTracks: Tracks = {
       "signals": [
       ],
       "examples": [
+        "Able to understand and employ fundamental object-oriented principles, appropriately.",
+        "Able to create basic user interfaces & interaction from a reference design.",
+        "Demonstrates understanding of basic networking; able to use simple, RESTful web APIs to create dynamic applications.",
+        "Demonstrates competency using a simple git workflow to collaborate on a project; including GitHub pull requests, code reviews, & resolving simple merge conflicts.",
+        "Demonstrates basic understanding of Unix command line and simple shell commands & operations.",
+        "Seeks out solutions to problems appropriately; understands when and how to use online resources, troubleshooting, and co-workers.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates a firm grasp of all object-oriented concepts & SOLID design principles.",
+        "Writes clean, maintainable code that is easy for other developers to understand. Values readable code over clever code. Understands how and when to refactor code. Documents code effectively, as needed.",
+        "Capable of writing simple tests; unit or BDD.",
+        "Capable of building custom, non-native user interfaces, layouts & interactions; including basic animations.",
+        "Demonstrates proficiency with networking concepts, including authentication (i.e. auth headers or OAuth); able to consume web services while being mindful of security concerns & device resource constraints. Able to design appropriate data models based on API resources.",
+        "Confident performing more advanced git operations (i.e. revert, rebase/squash) branching strategies, and resolving more complex merge conflicts.",
+        "Demonstrates competency with Unix command line and advanced shell commands & operations.",
+        "Demonstrates understanding of build & release process, including; building for release, continuous integration, app signing, test build distribution, & app store submission.",
+        "Capable of performing a thorough code review.",
+        "Demonstrates knowledge of when to seek assistance.",
+        "Capable of maintaining a legacy codebase.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates fluency in object-oriented concepts & able to leverage OOP design patterns, when appropriate.",
+        "Creates tools (i.e. scripts, helper libraries) that help speed up & simplify development for their team, and documents their usage.",
+        "Demonstrates proficiency in test writing and in writing testable code. Comfortable with concepts such as test doubles, fixtures, & mock APIs.",
+        "Capable of creating complex, novel UI and animations from scratch. Demonstrates understanding of UI performance considerations and applies that knowledge to create responsive, dynamic user interfaces.",
+        "Capable of creating apps that can consume any web service provided. Demonstrates fluency in RESTful API concepts and design, including authentication. Capable of designing a REST/JSON API to suit the needs of a project, be it mobile or web.",
+        "Demonstrates fluency in git. Able to admin a GitHub repo, managing features such as protected branches & web hook integrations. Capable of designing or selecting a branching strategy for various types of projects with multiple release pipelines.",
+        "Possesses breadth of knowledge of their primary platform (i.e. Android, iOS, web) and can answer technical questions about the platform’s capabilities and constraints.",
+        "Capable of designing & creating a complete build-to-release process, including; writing any custom scripts that may be needed, handling complex signing and release scenarios, administration of CI servers, and management of either app store accounts & submission configuration (i.e. metadata) or server hosting of the web application.",
+        "Able to contribute to any project when needed, regardless of technology stack.",
+        "On a legacy codebase, having the wisdom to tell when simple bug fixing is enough or larger scale refactoring and rewrites are necessary, not just desirable.",
       ],
     },{
       "summary": "",
@@ -669,18 +723,45 @@ export const devTracks: Tracks = {
       "signals": [
       ],
       "examples": [
+        "Able to understand and employ fundamental object-oriented principles, appropriately.",
+        "Able to create basic user interfaces & interaction from a reference design.",
+        "Demonstrates understanding of basic networking; able to use simple, RESTful web APIs to create dynamic applications.",
+        "Demonstrates competency using a simple git workflow to collaborate on a project; including GitHub pull requests, code reviews, & resolving simple merge conflicts.",
+        "Demonstrates basic understanding of Unix command line and simple shell commands & operations.",
+        "Seeks out solutions to problems appropriately; understands when and how to use online resources, troubleshooting, and co-workers.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates a firm grasp of all object-oriented concepts & SOLID design principles.",
+        "Writes clean, maintainable code that is easy for other developers to understand. Values readable code over clever code. Understands how and when to refactor code. Documents code effectively, as needed.",
+        "Capable of writing simple tests; unit or BDD.",
+        "Capable of building custom, non-native user interfaces, layouts & interactions; including basic animations.",
+        "Demonstrates proficiency with networking concepts, including authentication (i.e. auth headers or OAuth); able to consume web services while being mindful of security concerns & device resource constraints. Able to design appropriate data models based on API resources.",
+        "Confident performing more advanced git operations (i.e. revert, rebase/squash) branching strategies, and resolving more complex merge conflicts.",
+        "Demonstrates competency with Unix command line and advanced shell commands & operations.",
+        "Demonstrates understanding of build & release process, including; building for release, continuous integration, app signing, test build distribution, & app store submission.",
+        "Capable of performing a thorough code review.",
+        "Demonstrates knowledge of when to seek assistance.",
+        "Capable of maintaining a legacy codebase.",
       ],
     }, {
       "summary": "",
       "signals": [
       ],
       "examples": [
+        "Demonstrates fluency in object-oriented concepts & able to leverage OOP design patterns, when appropriate.",
+        "Creates tools (i.e. scripts, helper libraries) that help speed up & simplify development for their team, and documents their usage.",
+        "Demonstrates proficiency in test writing and in writing testable code. Comfortable with concepts such as test doubles, fixtures, & mock APIs.",
+        "Capable of creating complex, novel UI and animations from scratch. Demonstrates understanding of UI performance considerations and applies that knowledge to create responsive, dynamic user interfaces.",
+        "Capable of creating apps that can consume any web service provided. Demonstrates fluency in RESTful API concepts and design, including authentication. Capable of designing a REST/JSON API to suit the needs of a project, be it mobile or web.",
+        "Demonstrates fluency in git. Able to admin a GitHub repo, managing features such as protected branches & web hook integrations. Capable of designing or selecting a branching strategy for various types of projects with multiple release pipelines.",
+        "Possesses breadth of knowledge of their primary platform (i.e. Android, iOS, web) and can answer technical questions about the platform’s capabilities and constraints.",
+        "Capable of designing & creating a complete build-to-release process, including; writing any custom scripts that may be needed, handling complex signing and release scenarios, administration of CI servers, and management of either app store accounts & submission configuration (i.e. metadata) or server hosting of the web application.",
+        "Able to contribute to any project when needed, regardless of technology stack.",
+        "On a legacy codebase, having the wisdom to tell when simple bug fixing is enough or larger scale refactoring and rewrites are necessary, not just desirable.",
       ],
     }, {
       "summary": "",
@@ -741,19 +822,19 @@ export const dldlTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Uses enthusiasm to steer the client and team toward long and short term project goals. Employs tools to solve problems and manage small or internal projects independently and successfully. These include tools like project management tools (Trello, JIRA), team performance metrics, Google Docs, story mapping, story cards, burn down, Basecamp, distribution tools, crash analysis tools, and analytics tools. Thinks about the current needs of a project, but also considers and plans for project needs weeks into the future.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Uses enthusiasm and knowledge to steer the client and team toward long and short term project goals. Employs tools to solve problems and manage small to medium projects independently and successfully. These include tools like project management tools (Trello, JIRA), team performance metrics, Google Docs, story mapping, story cards, burn down, Basecamp, distribution tools, crash analysis tools, and analytics tools. Knows which tool to use depending on the scope and phase of the project. Knows how to break down work into smaller, more digestible pieces. Thinks about the current needs of a project, but also considers and plans for project needs months into the future. Learns strategies for positive project movement regardless of noise, blockers, or indecision from the client.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Uses enthusiasm, knowledge, and motivation to steer the client and team toward long and short term project goals. Employs tools to solve problems and manage large or enterprise projects or programs independently and successfully. These include tools like project management tools (Trello, JIRA), team performance metrics, Google Docs, story mapping, story cards, burn down, Basecamp, distribution tools, crash analysis tools, and analytics tools. Knows which tool to use depending on the scope and phase of the project. Knows how to break down work into smaller, more digestible pieces, and teaches the team why that is important. Seeks out new techniques and tools, tries them out, and makes recommendations to their teams. Thinks about the current needs of a project, but also considers and plans for project needs in order to sustain a long-term and mutually beneficial client relationship. Develops strategies for positive project movement regardless of noise, blockers, or indecision from the client.",
       "signals": [
       ],
       "examples": [
@@ -777,19 +858,19 @@ export const dldlTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Building fluency in the common languages of project management and Agile methodologies. Actively learning how to communicate with Designers, Developers, QA, Sales, and clients in their language, working with consideration for their cares and concerns.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates fluency in the common languages of project management and Agile methodologies. Fosters a highly-collaborative project process and leans on the team to talk through both scope and technical challenges to negotiate thoughtful outcomes. Effectively communicates with Designers, Developers, QA, Sales, and clients in their language, working with consideration for their cares and concerns. Conducts difficult and actionable conversations with clients and team members, in person and via email, with positive outcomes. Understands business strategy. May participate in cross-discipline councils, bringing a delivery-focused voice to the conversation and building trust between the Delivery Lead team and other disciplines.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates fluency in the common languages of project management and Agile methodologies. Fosters a highly-collaborative project process and, as a result, is trusted by their client and team to lead and actively participate in discussions for both scope and technical challenges, and negotiate thoughtful outcomes. Expertly communicates with Designers, Developers, QA, Sales, and clients in their language, working with consideration for their cares and concerns. Can conduct very difficult and actionable conversations with clients and team members, in person and via email, with consistently positive outcomes. Understands business strategy and actively pushes towards business goals for Detroit Labs and our clients. Enthusiastically participates in cross-discipline councils, bringing a delivery-focused voice to the conversation and building trust between the Delivery Lead team and other disciplines. Understands a client’s drivers and navigating its organization (Who is important, and who is creating noise? What is an emergency that you’ll need to work over the weekend for and call your team up, and what can wait?)",
       "signals": [
       ],
       "examples": [
@@ -816,19 +897,19 @@ export const designTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Familiarity with information architecture, multi-step and cross-platform flows. Consistently considers the holistic user experience and potential states (errors, success, dead-ends) in their work.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates proficiency in and understanding of information architecture, multi-step and cross-platform flows. Consistently considers the holistic user experience and potential states (errors, success, dead-ends) in the projects they work on.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates and articulates a strong understanding of information architecture, multi-step and cross-platform flows. Consistently considers the holistic user experience and potential states (errors, success, dead-ends) in the projects they work on.",
       "signals": [
       ],
       "examples": [
@@ -852,19 +933,19 @@ export const designTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates taste of layout, typography and visual hierarchy.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates understanding of layout, typography and visual hierarchy. Uses platform design principles and existing style guides.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates and articulates understanding of layout, typography and visual hierarchy, as it pertains to mobile apps.",
       "signals": [
       ],
       "examples": [
@@ -888,19 +969,19 @@ export const designTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Works with their design mentor to employ the appropriate design tools to solve and communicate user flows, interaction and motion. These tools include sketching, diagramming, interface design tools (Sketch, Photoshop, Illustrator) and prototyping tools (InVision, Framer, Principle).",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Employs design tools to solve and communicate user flows, interaction and motion, and knows which tool to use depending on the scope and phase of the project. These tools include sketching, diagramming, interface design tools (Sketch, Photoshop, Illustrator) and prototyping tools (InVision, Framer, Principle).",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Employs a broad set of design tools to best solve and communicate user flows, interaction and motion, and knows which tool to use depending on the scope and phase of the project. These tools include sketching, diagramming, interface design tools (Sketch, Photoshop, Illustrator) and prototyping tools (InVision, Framer, Principle). Additionally, seeks out new techniques and tools, tries them out and makes recommendations to the Design team.",
       "signals": [
       ],
       "examples": [
@@ -927,19 +1008,19 @@ export const qaTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Adapts to the project processes used by Detroit Labs. This includes understanding project definition and scope, high-level understanding of business requirements, a general understanding of how to write a bug report and high-level understanding of the Agile development process. Takes initiative in getting involved and contributing.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Demonstrates a strong understand of the project processes used by Detroit Labs. This includes using project definition, scope, and business requirements to create a testing strategy and a test plan, if required. Demonstrates a proficiency in regression testing, writing detailed bug reports, identifying use cases, prioritizing issues, assigning severity, and working on a team.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Has an expertise in the project processes used by Detroit Labs. Uses project definition, scope, and business requirements to create a testing strategy. Is an expert in regression testing, writing detailed test cases and bug reports, identifying use cases, prioritizing issues, assigning severity, and being an overall high contributor to the team. Is highly competent in troubleshooting and finding solutions. ",
       "signals": [
       ],
       "examples": [
@@ -957,31 +1038,31 @@ export const qaTracks: Tracks = {
     "categories": ["QACraft"],
     "description": "Develops expertise in writing and executing Automated Tests",
     "milestones": [{
-      "summary": "",
+      "summary": "Is actively learning or has done a few tutorials and exercises on Automated Tests.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Continued learning and implementing Automated Tests in a project.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Consistently implementing Automated Tests in a project and more advanced techniques.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Teaching and Leading Automated Testing at Labs.",
       "signals": [
       ],
       "examples": [
       ],
     },{
-      "summary": "",
+      "summary": "Industry Expert in Automated Testing.  Is creating the next better Automated Tests.",
       "signals": [
       ],
       "examples": [
@@ -999,19 +1080,19 @@ export const qaTracks: Tracks = {
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Has fundamental knowledge (or experience) with bug-tracking software (Jira, Trello) and/or the ability to quickly ramp up on it. Has an openness to learn how to use technical software tools as required on a project by project basis.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Has advanced-level experience with Agile bug-tracking software (Jira, Trello), familiarity with API testing tools (Postman, Charles Proxy) or a willingness to learn them and the overall drive to learn and make use of tools used by the development team. Actively pursues training and professional development, keeps ahead of new industry trends and tools of the trade.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Has expert-level knowledge of Agile bug-tracking software (Jira, Trello) and API testing tools (Postman, Charles Proxy). Additionally, seeks out new techniques and tools, tries them out, and makes recommendations to the Quality Engineering team or the delivery team as a whole.",
       "signals": [
       ],
       "examples": [
@@ -1027,33 +1108,33 @@ export const qaTracks: Tracks = {
   "Accessibility": {
     "displayName": "Accessibility",
     "categories": ["QACraft"],
-    "description": "Experience with accessibility standards and promotion",
+    "description": "Owns and promotes accessibility standards such as WCAG while pairing with team members to implement them into project work. Actively evaluates and provides suggestions to existing processes or suggests new processes in order to increase the chances of project success.",
     "milestones": [{
-      "summary": "",
+      "summary": "Has learned and understands some basic Accessibility standards",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Continued learning and calls out basic Accessibility standards from team.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Understands and catches more advanced Accessibility standards.",
       "signals": [
       ],
       "examples": [
       ],
     }, {
-      "summary": "",
+      "summary": "Owns and promotes Accessibility standards such as WCAG while pairing with team members to implement them into project work. Actively evaluates and provides suggestions to existing processes or suggests new processes in order to increase the chances of project success.",
       "signals": [
       ],
       "examples": [
       ],
     },{
-      "summary": "",
+      "summary": "Creates new standards of Accessibility in the industry.",
       "signals": [
       ],
       "examples": [
