@@ -56,7 +56,7 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Mark Schall',
+    name: 'Your Name Here',
     title: eligibleTitles(defaultMilestoneMap())[0],
     milestoneByTrack: defaultMilestoneMap(),
     focusedTrackId: trackIds[0]

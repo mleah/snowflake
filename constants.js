@@ -1227,7 +1227,7 @@ export const emptyMilestoneMap = (): MilesoneMap => {
 export const defaultMilestoneMap = (): MilestoneMap => {
   let milestoneMap = {}
   trackIds.forEach((trackId) => {
-    milestoneMap[trackId]= 2
+    milestoneMap[trackId]= 0
   })
   return milestoneMap
 }
