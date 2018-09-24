@@ -20,7 +20,7 @@ class TrackSelector extends React.Component<Props> {
         }
         .track-selector {
           flex-grow: 0;
-          flex-basis: 25%;
+          flex-basis: 30%;
           margin-right: 50px;
           margin-top: -5px;
         }
@@ -45,6 +45,14 @@ class TrackSelector extends React.Component<Props> {
           text-align: center;
           font-size: 10px;
         }
+        table {
+            width: 100%;
+            border-spacing: 3px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            margin-left: -3px;
+          }
       `}</style>
       <tbody>
       {categoryIds.map(categoryId => (
